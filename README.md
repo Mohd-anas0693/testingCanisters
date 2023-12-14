@@ -27,3 +27,4 @@ If you want to test your project locally, you can use the following commands:
 ```bash
 # Run the test script
 bash "test.sh" 
+# testingCanisters
