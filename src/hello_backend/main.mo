@@ -71,7 +71,7 @@ shared ({ caller = owner }) actor class IndexCanister() = this {
       partitionKey = pk;
       scalingOptions = {
         autoScalingHook = autoScaleHelloServiceCanister;
-        sizeLimit = #heapSize(5_000_000); // Scale out at 475MB
+        sizeLimit = #heapSize(450_000_000); // Scale out at 475MB
         // for auto-scaling testing
         //sizeLimit = #count(3); // Scale out at 3 entities inserted
       };
