@@ -1,11 +1,10 @@
-npm i 
+npm i --force
 echo "stopping canister"
 echo "---------Stoping dfx----------"
 dfx stop
 echo "---------Starting dfx----------"
 dfx start --clean --background
 echo "---------Deploying Backend Canister----------"
-count=100000
 dfx deploy backend
 userCanister=$(dfx canister call backend createHelloServiceCanisterByGroup userCanister | grep -oP '(?<=\")(.*?)(?=\")')
 echo " --------------------------------"
